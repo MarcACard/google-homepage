@@ -1,0 +1,101 @@
+
+html, body {
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+/* Flexbox Things */
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.space-between { 
+    justify-content: space-between;
+}
+
+/* --- HEADER & FOOTER--- */
+#footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    color: #5f6368;
+}
+
+.nav-item {
+    padding: 10px 10px;
+    font-size: .70em;
+    display: inline-block;
+}
+
+
+/* --- SEARCH FORM LAYOUT --- */
+#main { 
+    max-width: 600px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+form {
+    width: 100%;
+    align-items: center;
+}
+
+img {
+    max-width: 50%;
+}
+
+/* --- SEARCH BAR STYLES --- */
+#search-bar {
+    width: 70%;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    margin: 20px 0;
+}
+
+#search-bar:hover {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+}
+
+#search-bar > input {
+    outline: none;
+    border: none;
+    padding: 1em 2em;
+    width: 100%;
+    margin: 0 auto;
+    background: none;
+}
+
+#search-bar:focus {
+    outline: none;
+}
+
+/* --- SEARCH BUTTON STYLES --- */
+.search-buttons {
+    margin: 10px 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: grey;
+}
+
+.search-buttons:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+    background-color: #f8f8f8;
+    color: black;
+}
+

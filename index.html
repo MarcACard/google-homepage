@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" href="assets/google-icon.png">
+        <title>Google</title>
+    </head>
+    <body>
+        <div id="header" class="flex space-between">
+            <div class="navigation">
+                <a class="nav-item" >About</a>
+                <a class="nav-item" >Store</a>
+            </div>
+            <div class="navigation">
+                <a class="nav-item" >Gmail</a>
+                <a class="nav-item" >Images</a>
+                <a class="nav-item" >icon</a>
+                <a class="nav-item" >profile</a>
+            </div>
+        </div>
+        <div id="main" class="flex-column">
+                    <img src="assets/google_logo.png" />
+
+                <form class="flex-column">
+                    <div id="search-bar">
+                    <input id="search-input" type="text"></input>
+                    </div>
+                    <div id="search-buttons">
+                        <button id="primary-search-button" class="search-buttons">Google Search</button>
+                        <button id="feeling-lucky-button"class="search-buttons">I'm Feelin Lucky</button>
+                    </div>
+                </form>
+        </div>
+        <div id="footer" class="flex space-between">
+            <div>
+                <a class="nav-item">Advertising</a>
+                <a class="nav-item">Business</a>
+                <a class="nav-item">How Search works</a>
+            </div>
+            <div>
+                <a class="nav-item">Privacy</a>
+                <a class="nav-item" >Terms</a>
+                <a class="nav-item">Settings</a>
+            </div>
+        </div>
+        <script>
+            var searchButton = document.getElementById("primary-search-button");
+            var feelingLuckyButton = document.getElementById("feeling-lucky-button");
+            
+            // Event Listeners
+            searchButton.addEventListener('click', function(event){
+                event.preventDefault();
+                runSearch();
+            });
+            feelingLuckyButton.addEventListener('click', function(event){
+                event.preventDefault();
+                runSearch();
+            });
+
+            // Search Functionality
+            function runSearch(){
+                var searchInput = document.getElementById("search-input");
+                var baseURL = "https://www.google.com/search?q="
+
+                var searchText = searchInput.value; 
+
+                if (searchText){
+                    var encodedText = encodeURIComponent(searchText)
+                    window.open(baseURL + encodedText, '_blank')
+
+                } else {
+                    window.open('https://marccard.dev/', '_blank')
+                }
+            }
+
+        </script>
+    </body>
+</html>
